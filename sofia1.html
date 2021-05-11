@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia's page</title>
+</head>
+<body>  
+    
+<h1>Sofia's page 7</h1>
+<p>I love puppy dogs</p>      
+
+My name is: 
+<input type="text" id="myname" placeholder="write your name"/>
+
+<br/>
+
+<button name="hello" onclick="sayhello()">Click me please!</button>
+
+<div>conversation</div>
+<div id=convo></div>
+
+<input id='repl' type="text" placeholder="reply"/>
+<button onclick="reply()">Reply back</button>
+<script>
+
+function sayhello() {
+    var name = document.getElementById('myname').value;
+    document.getElementById('convo').innerHTML = 
+    document.getElementById('convo').innerHTML + '<br/>' +
+    'Computer says: Hello '+ name;
+}
+
+function reply() {
+    var name = document.getElementById('myname').value;
+    document.getElementById('convo').innerHTML = 
+    document.getElementById('convo').innerHTML + '<br/>'
+    + name + ' says '+ document.getElementById('repl').value;
+}
+
+</script>
+</body>
+</html>
